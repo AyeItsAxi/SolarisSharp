@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;8061</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;8061</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Lib\Fonts\Extrabold\GgSansExtrabold.ttf" />
+    <None Remove="Lib\Fonts\Normal\GgSansNormal.ttf" />
+    <None Remove="Lib\Fonts\Semibold\GgSansSemibold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Lib\Fonts\Extrabold\GgSansExtrabold.ttf" />
+    <Resource Include="Lib\Fonts\Normal\GgSansNormal.ttf" />
+    <Resource Include="Lib\Fonts\Semibold\GgSansSemibold.ttf" />
+  </ItemGroup>
+
+</Project>
